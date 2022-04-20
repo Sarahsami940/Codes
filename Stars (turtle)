@@ -1,0 +1,25 @@
+import turtle
+
+cosmo = turtle.Turtle()
+cosmo.getscreen().bgcolor("grey")
+cosmo.color("Navy")
+cosmo.speed(9)
+
+cosmo.penup()
+cosmo.setheading(180)
+cosmo.forward(100)
+cosmo.setheading(0)
+cosmo.pendown()
+
+
+def star(turtle, size):
+    if size <= 10:
+        return
+    else:
+        for i in range(5):
+           turtle.forward(size)
+           star(turtle, size/3)
+           turtle.left(216)
+
+
+star(cosmo, 360)
