@@ -1,0 +1,14 @@
+import turtle
+
+spiral = turtle.Turtle()
+spiral.getscreen().bgcolor("Black")
+spiral.speed(0)
+spiral.pensize(2)
+
+for i in range(6):
+    for colors in ["red","magenta","blue","cyan","green","yellow","white"]:
+        spiral.color(colors)
+        spiral.circle(100)
+        spiral.left(10)
+
+spiral.hideturtle()
